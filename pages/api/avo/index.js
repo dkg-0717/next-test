@@ -7,6 +7,7 @@ const allAvos = async (request, response) => {
   response.statusCode = 200;
   response.setHeader('Content-type', 'application/json');
   response.end(JSON.stringify({ entries: allEntries, length }))
+
 }
 
 export default allAvos;

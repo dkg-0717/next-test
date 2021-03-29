@@ -16,19 +16,15 @@ const Home = () => {
     setShowModal(true)
   }
 
-  console.log(productList)
-
   return (
     <>
       <h1>Este es el home</h1>
       <pre>{JSON.stringify(productList)}</pre>
-      {productList.map(product => {
-        <div>{product}</div>
-      })}
       <ul>
         {productList.map(product => {
-          <li>{product}</li>
-        })}
+          <li>{product.name}</li>
+        })
+        }
       </ul>
       <button className="btn btn-outline-primary" onClick={handleModal}>Mostrar Modal</button>
       <Modal
