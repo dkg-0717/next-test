@@ -19,10 +19,11 @@ const Home = () => {
   return (
     <>
       <h1>Este es el home</h1>
-      <pre>{JSON.stringify(productList)}</pre>
       <ul>
         {productList.map(product => {
-          <li>{product.name}</li>
+          return (
+            <li key={product.id}>{product.name}</li>
+          )
         })
         }
       </ul>
