@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from './modal.module.css'
 
 const Modal = ({ show, closeModal, msg, title }) => {
   if (!show) return null
   return (
-    <div className="custom-modal" tabIndex="-1">
-      <div className="modal-dialog">
+    <div className={`custom-modal  ${show && styles.active}`} tabIndex="-1">
+      <div className={`modal-dialog`}>
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">{title}</h5>
